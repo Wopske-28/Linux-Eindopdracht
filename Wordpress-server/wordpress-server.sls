@@ -47,10 +47,11 @@ Create wordpress site directory:
 Connect to database:
   file.line:
     - name: /var/www/html/wordpress.com/wp-config.php
-    - match: "    define('DB_USER', 'wordpress');"
-    - content: "define('DB_USER', 'wordpress');
-define('DB_PASSWORD', 'root');"
-    - mode: "replace"
+    - after: "    define('WP_CONTENT_DIR', '/var/lib/wordpress/wp-content');"
+    - content: "define('DB_PASSWORD', 'root');
+                define( 'WP_DEBUG', true);
+                define( 'WP_DEBUG_LOG', true);"
+    - mode: "insert"
 
 Restart apache2:
   cmd.run:

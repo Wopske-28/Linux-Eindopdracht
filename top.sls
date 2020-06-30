@@ -1,13 +1,13 @@
 base:
   'kooijwordpress':
-    - wordpress-server
+    - server-wordpress
   'kooijdocker':
-    - docker-engine-helloworld
+    - server-docker
   'kooijrsyslog':
-    - rsyslog-server
+    - server-rsyslog
   'kooijlog':
-    - cacti-server-setup
+    - server-cacti
   '*':
-    - snmp-device
-    - rsyslog-setup
+    - client-snmp
+    - client-rsyslog
 

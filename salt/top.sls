@@ -1,13 +1,13 @@
 base:
-  'kooijwordpress':
+  'kooijwordpress*':
     - server-wordpress
     - client-rsyslog
-  'kooijdocker':
+  'kooijdocker*':
     - server-docker
     - client-rsyslog
-  'kooijrsyslog':
+  'kooijrsyslog*':
     - server-rsyslog
-  'kooijlog':
+  'kooijlog*':
     - server-cacti
     - client-rsyslog
   '*':

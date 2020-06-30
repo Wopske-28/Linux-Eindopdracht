@@ -13,12 +13,14 @@ deploy conf file:
     - name: /etc/rsyslog.conf
     - source: salt://rsyslog.conf
 
-Restart service:
+Watch rsyslog conf:
   service.running:
     - name: rsyslog
     - enable: true
     - reload: true
     - watch:
       - file: /etc/rsyslog.d/50-default.conf
+
+Restart rsylog service:  
   cmd.run:
-    - name: 'systemctl restart rsyslog' 
+    - name: sudo systemctl restart rsyslog 

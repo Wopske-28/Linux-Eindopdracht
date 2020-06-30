@@ -10,14 +10,24 @@ deploy rsyslog conf file:
 
 Allow firewall 514:
   cmd.run:
+    - name: ufw allow 514
+
+Allow firewall 514 tcp:
+  cmd.run:
     - name: ufw allow 514/tcp
+
+Allow firewall 514 udp:
+  cmd.run:
+    - name: ufw allow 514/udp
     
-Restart rsyslog server:
+Watch rsyslog conf:
   service.running:
     - name: rsyslog
     - enable: true
     - reload: true
     - watch:
       - file: /etc/rsyslog.d/01-logserver.conf
-    - cmd.run:
-      -name: 'systemctl restart rsyslog'
+
+Restart rsyslog:
+  cmd.run:
+    - name: sudo systemctl restart rsyslog

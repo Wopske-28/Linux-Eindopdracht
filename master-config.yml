@@ -1,0 +1,14 @@
+#cloud-config
+package_update: true
+
+salt_master:
+    pkg_name: 'salt-master'
+    service_name: 'salt-master'
+    config_dir: '/etc/salt'
+
+salt_minion:
+    pkg_name: 'salt-minion'
+    service_name: 'salt-minion'
+    config_dir: '/etc/salt'
+    conf:
+        master: 127.0.0.1

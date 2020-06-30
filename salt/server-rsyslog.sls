@@ -7,7 +7,7 @@ deploy rsyslog conf file:
   file.managed:
     - name: /etc/rsyslog.d/01-logserver.conf
     - source: salt://01-logserver.conf
-	
+
 Allow firewall 514:
   cmd.run:
     - name: ufw allow 514/tcp

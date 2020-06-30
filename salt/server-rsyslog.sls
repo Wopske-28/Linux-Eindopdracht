@@ -30,4 +30,4 @@ Watch rsyslog conf:
 
 Restart rsyslog:
   cmd.run:
-    - name: sudo systemctl restart rsyslog
+    - name: sudo service rsyslog restart

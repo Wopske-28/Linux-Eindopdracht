@@ -19,14 +19,6 @@ Allow firewall 514 tcp:
 Allow firewall 514 udp:
   cmd.run:
     - name: ufw allow 514/udp
-    
-Watch rsyslog conf:
-  service.running:
-    - name: rsyslog
-    - enable: true
-    - reload: true
-    - watch:
-      - file: /etc/rsyslog.d/01-logserver.conf
 
 Restart rsyslog:
   cmd.run:

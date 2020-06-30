@@ -2,10 +2,6 @@ install_rsyslog:
   pkg.installed:
     - pkgs:
       - rsyslog
-      - apache2
-      - mysql-server-5.7
-      - php
-      - libapache2-mod-php
 
 deploy conf file:
   file.managed:

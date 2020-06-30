@@ -2,6 +2,7 @@ install cacti and dependencies:
   pkg.installed:
     - pkgs:
       - apache2
+      - pcregrep
       - mysql-server-5.7
       - php
       - libapache2-mod-php

@@ -7,7 +7,7 @@ base:
     - client-rsyslog
   'kooijsyslog*':
     - server-rsyslog
-  'kooijlog*':
+  'kooijcacti*':
     - server-cacti
     - client-rsyslog
   '*':

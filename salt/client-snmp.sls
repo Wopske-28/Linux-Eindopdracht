@@ -2,10 +2,6 @@ install_snmpd_requirements:
   pkg.installed:
     - pkgs:
       - snmpd
-      - apache2
-      - mysql-server-5.7
-      - php
-      - libapache2-mod-php
 
 Restart snmpd service:
   service.running:

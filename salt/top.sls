@@ -5,7 +5,7 @@ base:
   'kooijdocker*':
     - server-docker
     - client-rsyslog
-  'kooijrsyslog*':
+  'kooijsyslog*':
     - server-rsyslog
   'kooijlog*':
     - server-cacti

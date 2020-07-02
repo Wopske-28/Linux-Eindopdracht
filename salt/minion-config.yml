@@ -6,4 +6,4 @@ salt_minion:
     service_name: 'salt-minion'
     config_dir: '/etc/salt'
     conf:
-        master: 10.0.0.15
+        master: 10.0.0.154
